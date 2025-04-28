@@ -1,0 +1,42 @@
+# ======================
+# 📦 Dependências e builds
+# ======================
+node_modules/
+dist/
+build/
+.cache/
+coverage/              # Ex: cobertura de testes (nyc, istanbul)
+
+# ======================
+# 🧪 Cypress
+# ======================
+cypress/screenshots/
+cypress/videos/
+cypress/reports/       # Relatórios gerados (ex: mochawesome, allure)
+.cypress/
+
+# ======================
+# 📝 Arquivos de configuração e ambiente
+# ======================
+.env
+.env.*.local
+
+# ======================
+# 🗂️ Sistema operacional
+# ======================
+Thumbs.db              # Windows
+
+# ======================
+# 🧹 Logs e arquivos temporários
+# ======================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+*.log.*
+*.tmp
+*.bak
+*.orig
+*.rej
+
+
