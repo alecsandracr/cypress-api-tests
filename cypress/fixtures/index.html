@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teste de criação de usuário</title>
+</head>
+<body>
+  <h1>Mock com Intercept</h1>
+  <button id="criar">Criar Usuário</button>
+
+  <script>
+    document.getElementById('criar').addEventListener('click', () => {
+      fetch('https://reqres.in/api/users', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: 'morpheus',
+          job: 'leader'
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log('Usuário criado (mock):', data)
+        alert('Usuário mockado criado!')
+      })
+      .catch(err => {
+        console.error('Erro ao criar usuário:', err)
+        alert('Erro na criação')
+      })
+    })
+  </script>
+</body>
+</html>
